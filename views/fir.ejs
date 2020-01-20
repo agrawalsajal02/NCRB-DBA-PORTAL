@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Police App Administrator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+        #yes {
+            padding-top: 8%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <nav class="navbar navbar-inverse  navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand active" href="/">Police Bureau App</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="\fir">FIR</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Data entry <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="\policereg">Police Station registration</a></li>
+                            <li><a href="\ncrbentry">NCRB OFFICIALS REGISTRATION</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <%		if(!currentuser){%>
+                    <li><a href="/login">LOGIN</a></li>
+                    <%	}else{   %>
+                    <li><a href="#">Sign In As <%=currentuser.username.toUpperCase()%></a></li>
+
+                    <li><a href="/logout">LOGOUT</a></li>
+                    <%}%>
+
+            
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    </div>
+    
+    <br><br><Br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div>
+                    <div class="col-lg-4">
+                        <h1>FIR DETAILS</h1>
+                        <br>
+                        <form class="form-group" action="/fir" method="POST">
+                            <label>State</label>
+                            <input class="form-control" type="text" name="state" placeholder="Type Statename">
+                            <br>
+                            <label>City</label>
+                            <input class="form-control" type="text" name="city" placeholder="Type City Name"><br>
+                            <label>Police station name</label>
+                            <input class="form-control" type="text" name="ps"
+                                placeholder="Type Police station name"><br>
+                                                    <button class="btn btn-primary">Submit</button>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </div>
+
+        
+    </body>
+
+    </html>
+    
+    
+    
+    
+    <footer class="container-fluid text-center" style=" bottom:0; margin-top: 80px ;background-color: #23415c;width:100%;padding-top: 3%;padding-bottom: 3%;color:#FFF;">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Contact Us</h2>
+                <br><br>
+                <h3>Our Adress And Contact Info Here</h3>
+    <h5>National Highway - 8, Mahipalpur,<br>
+        New Delhi - 110037<br>
+        Telephone: (011) 26735450<br>
+        Fax: (011) 26782257<br>
+        Email: dct@ncrb.nic.in<br></h5>
+            </div>
+            <div class="col-sm-4">
+    <h2>Connect</h2>
+    <a href="https://www.facebook.com/officialNCRB/" class="fa fa-facebook fa-2x"></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://twitter.com/NCRBHQ" class="fa fa-twitter fa-2x"></a>
+    
+    
+    
+                </div>
+                <div class="col-sm-4">
+                        <img src="logo.jpg" style="max-width: 300px;" alt="">
+                    </div>
+        </div>
+    
+    </footer>
+    </body>
+    </html>
